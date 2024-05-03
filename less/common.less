@@ -1,0 +1,347 @@
+html {
+  --main-color: #1446cc;
+  --main-color-rgb: 20, 70, 204;
+
+  --body-color: var(--bs-body-color);
+
+
+  --bs-shadow: 0 8px 16px rgba(var(--bs-body-color-rgb), 0.15);
+  --bs-shadow-active: 0 4px 8px rgba(var(--bs-body-color-rgb), 0.15);
+
+
+  --transition-duration: .2s;
+  --bs-nice-shadow: 0 0 0 4px rgba(var(--main-color-rgb), .25);
+
+  overflow-x: hidden !important;
+
+  body {
+    // background-color: #f5f5f5;
+    font-size: .085rem;
+
+    .iconfont {
+      // font-size: .15rem;
+      // font-weight: bold;
+
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+  }
+}
+
+* {
+  ::selection {
+    background-color: var(--main-color);
+    color: #fff;
+  }
+
+  caret-color: var(--main-color) !important;
+
+  // border-color: var(--bs-border-color);
+}
+
+.navbar {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: .06rem .15rem;
+  height: .5rem;
+  background-color: #fff;
+
+  .iconfont {
+    font-size: .15rem;
+  }
+
+  .navbar-brand {
+    img {
+      height: 0.28rem;
+    }
+  }
+
+  .pharmacyBtn {
+    margin-left: 0.35rem;
+
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: var(--main-color);
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+      margin-left: 0.037rem;
+
+      .pharmacy-text {
+        font-size: 0.11rem;
+      }
+    }
+  }
+
+  .navbar-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 0.2rem;
+
+    .nav-item {
+      position: relative;
+      transition: all var(--transition-duration);
+
+      a {
+        padding: .07rem 0.08rem;
+        font-size: .115rem;
+
+        &:hover,
+        &.active {
+          color: var(--main-color);
+
+          &::after {
+            position: absolute;
+            left: 50%;
+            bottom: -.04rem;
+
+            content: '';
+
+            width: 35%;
+            height: .015rem;
+            border-radius: 1vh;
+            background-color: var(--main-color);
+
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-right {
+    margin-left: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.35rem;
+
+    form {
+      display: flex;
+      align-items: center;
+
+      input {
+        width: 0;
+
+        margin: 0;
+        padding: .06rem 0;
+
+        border: none;
+        border-radius: 999rem;
+
+        font-size: .1rem;
+        transition: all var(--transition-duration);
+
+        &:focus {
+          margin-right: .05rem;
+          padding: .06rem 0.11rem;
+          width: auto;
+          border: 1px solid var(--main-color);
+
+          box-shadow: var(--bs-nice-shadow);
+        }
+      }
+
+    }
+
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  margin: .2rem auto;
+
+  width: 6rem;
+
+  .tools {
+    .header {
+      display: flex;
+      justify-content: end;
+      margin-top: 0.04rem;
+
+      font-size: 1.1em;
+
+      a {
+        transition: all var(--transition-duration);
+
+        &:hover {
+          color: var(--main-color);
+          transform: translateX(0.03rem);
+        }
+
+        &:active {
+          transform: translateX(0.05rem);
+        }
+      }
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+
+      .tool-item {
+        padding: .05rem .1rem;
+        border-radius: 0.03rem;
+        // background-color: pink;
+
+        transition: all var(--transition-duration);
+
+        cursor: pointer;
+
+        &:hover {
+          transform: translateY(-0.02rem);
+          box-shadow: var(--bs-shadow);
+          color: var(--main-color);
+        }
+
+        &:active {
+          transform: translateY(-0.005rem);
+          box-shadow: var(--bs-shadow-active);
+        }
+
+        .tool-link {
+          img {
+            width: 0.42rem;
+          }
+
+          p {
+            margin-top: 0.06rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .appointment {
+    .row {
+      display: flex;
+      justify-content: space-between;
+
+      .appointment-item {
+        position: relative;
+
+        .appointment-link {
+          color: #fff;
+
+          p,
+          a {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          .title {
+            top: .1rem;
+            font-size: 1.8em;
+          }
+
+          .description {
+            top: .36rem;
+            font-size: 1.1em;
+          }
+
+          img {
+            &.bg {
+              width: 1.7rem;
+            }
+          }
+        }
+
+        img.icon {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+
+          width: .7rem;
+          cursor: pointer;
+
+          transition: all var(--transition-duration);
+
+          &:hover {
+            transform: scale(1.05);
+          }
+
+          &:active {
+            transform: scale(1.02);
+          }
+        }
+
+        .goto {
+          position: absolute;
+          bottom: -.055rem;
+          left: 50%;
+          z-index: 1;
+          transform: translateX(-50%);
+
+          display: flex;
+          align-items: center;
+
+          padding: .04rem 0.13rem;
+
+          background-color: rgb(151, 179, 255);
+          border-radius: 999rem;
+
+          color: #fff;
+
+          transition: all var(--transition-duration);
+
+          &:hover {
+            transform: translateY(-0.02rem) translateX(-50%);
+            box-shadow: var(--bs-shadow);
+          }
+
+          &:active {
+            transform: translateY(-0.005rem) translateX(-50%);
+            box-shadow: var(--bs-shadow-active);
+          }
+        }
+
+        &:first-child {
+          .goto {
+            background: linear-gradient(to right, rgba(168, 240, 210, .42), rgb(168, 240, 210, .42));
+          }
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: .1rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    i {
+      transition: color var(--transition-duration);
+      font-size: inherit;
+    }
+
+    &:hover {
+      text-decoration: underline;
+
+      i {
+        color: #c71d23;
+      }
+    }
+  }
+}
