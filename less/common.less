@@ -42,18 +42,48 @@ html {
   // border-color: var(--bs-border-color);
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+    transform: translateY(0.1rem) scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .navbar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 
   display: flex;
   align-items: center;
 
   padding: .06rem .15rem;
   height: .5rem;
-  background-color: #fff;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .3);
+
+  // color: rgba(255, 255, 255, .6);
+  color: #fff;
+  // transition: top .7s ease-in-out, color var(--transition-duration);
+  // transition: color var(--transition-duration);
+  transition: all var(--transition-duration), top .7s ease-in-out;
+
+  &.hide {
+    top: -100%;
+  }
 
   .iconfont {
     font-size: .15rem;
+
+    &:hover {
+      color: #fff
+    }
   }
 
   .navbar-brand {
@@ -69,7 +99,8 @@ html {
     align-items: center;
 
     &:hover {
-      color: var(--main-color);
+      // color: var(--main-color);
+      color: #fff;
     }
 
     .location {
@@ -101,7 +132,8 @@ html {
 
         &:hover,
         &.active {
-          color: var(--main-color);
+          // color: var(--main-color);
+          color: #fff;
 
           &::after {
             position: absolute;
@@ -113,7 +145,8 @@ html {
             width: 35%;
             height: .015rem;
             border-radius: 1vh;
-            background-color: var(--main-color);
+            // background-color: var(--main-color);
+            background-color: #fff;
 
             transform: translateX(-50%);
           }
@@ -135,10 +168,12 @@ html {
       align-items: center;
 
       input {
+        --main-color: #fff;
         width: 0;
 
         margin: 0;
         padding: .06rem 0;
+        background-color: transparent;
 
         border: none;
         border-radius: 999rem;
@@ -147,12 +182,14 @@ html {
         transition: all var(--transition-duration);
 
         &:focus {
+
           margin-right: .05rem;
           padding: .06rem 0.11rem;
           width: auto;
           border: .0052rem solid var(--main-color);
 
-          box-shadow: var(--bs-nice-shadow);
+          // box-shadow: var(--bs-nice-shadow);
+          box-shadow: 0 0 0 .0208rem rgba(255, 255, 255, .25);
         }
       }
 
@@ -161,14 +198,82 @@ html {
   }
 }
 
+.banner {
+  position: relative;
+  // height: 4.8rem;
+  height: 100vh;
+
+  .indicator {
+    position: absolute;
+    left: 50%;
+    bottom: .15rem;
+    transform: translateX(-50%);
+    z-index: 999;
+
+    display: flex;
+    justify-content: space-between;
+    gap: .15rem;
+
+    &>div {
+      height: 0.028rem;
+      width: .9rem;
+
+      background-color: #fff;
+      opacity: 0.5;
+
+      border-radius: 999rem;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    // background-color: pink;
+  }
+
+  .imgBox {
+    position: relative;
+
+    margin: auto;
+
+    width: 100%;
+    height: 100%;
+
+    animation: zoom linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0vh 90vh;
+
+    overflow: hidden;
+
+    @keyframes zoom {
+      from {
+        width: 100%;
+      }
+
+      to {
+        width: 70%;
+        border-radius: .5rem;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      transition: all var(--transition-duration);
+    }
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.6rem;
 
-  margin: .2rem auto;
+  margin: .5rem auto .3rem;
 
-  width: 6.2rem;
+  width: 6.4rem;
 
   .header {
     display: flex;
@@ -197,6 +302,10 @@ html {
   }
 
   .tools {
+    animation: fadeIn linear forwards;
+    animation-timeline: scroll();
+    animation-range: .5rem 70vh;
+
     .row {
       display: flex;
       justify-content: space-between;
@@ -319,6 +428,10 @@ html {
   }
 
   .appointment {
+    animation: fadeIn linear forwards;
+    animation-timeline: scroll();
+    animation-range: .3rem 95vh;
+
     .row {
       display: flex;
       justify-content: space-between;
@@ -425,6 +538,10 @@ html {
   }
 
   .recommend-doctor {
+    animation: fadeIn linear forwards;
+    animation-timeline: scroll();
+    animation-range: .1rem 95vh;
+
     .header {
       margin-bottom: .07rem;
 
@@ -554,4 +671,8 @@ html {
       }
     }
   }
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
