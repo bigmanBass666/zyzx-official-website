@@ -2,10 +2,10 @@ html {
   --main-color: #1446cc;
   --main-color-rgb: 20, 70, 204;
   --body-color: var(--bs-body-color);
-  --bs-shadow: 0 8px 16px rgba(var(--bs-body-color-rgb), 0.15);
-  --bs-shadow-active: 0 4px 8px rgba(var(--bs-body-color-rgb), 0.15);
+  --bs-shadow: 0 0.0417rem 0.0833rem rgba(var(--bs-body-color-rgb), 0.15);
+  --bs-shadow-active: 0 0.0208rem 0.0417rem rgba(var(--bs-body-color-rgb), 0.15);
   --transition-duration: 0.2s;
-  --bs-nice-shadow: 0 0 0 4px rgba(var(--main-color-rgb), 0.25);
+  --bs-nice-shadow: 0 0 0 0.0208rem rgba(var(--main-color-rgb), 0.25);
   overflow-x: hidden !important;
 }
 html body {
@@ -106,20 +106,20 @@ html body .iconfont:hover {
   margin-right: 0.05rem;
   padding: 0.06rem 0.11rem;
   width: auto;
-  border: 1px solid var(--main-color);
+  border: 0.0052rem solid var(--main-color);
   box-shadow: var(--bs-nice-shadow);
 }
 .container {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.4rem;
   margin: 0.2rem auto;
   width: 6rem;
 }
 .container .tools .header {
   display: flex;
   justify-content: end;
-  margin-top: 0.04rem;
+  margin-bottom: 0.03rem;
   font-size: 1.1em;
 }
 .container .tools .header a {
@@ -131,6 +131,9 @@ html body .iconfont:hover {
 }
 .container .tools .header a:active {
   transform: translateX(0.05rem);
+}
+.container .tools .header a i {
+  font-size: inherit;
 }
 .container .tools .row {
   display: flex;
@@ -164,6 +167,8 @@ html body .iconfont:hover {
 }
 .container .appointment .row .appointment-item {
   position: relative;
+  box-shadow: var(--bs-shadow);
+  border-radius: 0.09rem;
 }
 .container .appointment .row .appointment-item .appointment-link {
   color: #fff;
@@ -198,6 +203,9 @@ html body .iconfont:hover {
 }
 .container .appointment .row .appointment-item img.icon:active {
   transform: scale(1.02);
+}
+.container .appointment .row .appointment-item img.icon#xxyy-icon {
+  height: 0.65rem;
 }
 .container .appointment .row .appointment-item .goto {
   position: absolute;
