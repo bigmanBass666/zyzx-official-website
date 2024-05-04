@@ -116,23 +116,24 @@ html body .iconfont:hover {
   margin: 0.2rem auto;
   width: 6rem;
 }
-.container .tools .header {
+.container .header {
   display: flex;
-  justify-content: end;
+  align-items: center;
   margin-bottom: 0.03rem;
   font-size: 1.1em;
 }
-.container .tools .header a {
+.container .header a {
+  margin-left: auto;
   transition: all var(--transition-duration);
 }
-.container .tools .header a:hover {
+.container .header a:hover {
   color: var(--main-color);
   transform: translateX(0.03rem);
 }
-.container .tools .header a:active {
+.container .header a:active {
   transform: translateX(0.05rem);
 }
-.container .tools .header a i {
+.container .header a i {
   font-size: inherit;
 }
 .container .tools .row {
@@ -180,8 +181,9 @@ html body .iconfont:hover {
   transform: translateX(-50%);
 }
 .container .appointment .row .appointment-item .appointment-link .title {
-  top: 0.1rem;
+  top: 0.09rem;
   font-size: 1.8em;
+  letter-spacing: 0.1em;
 }
 .container .appointment .row .appointment-item .appointment-link .description {
   top: 0.36rem;
@@ -231,6 +233,11 @@ html body .iconfont:hover {
 }
 .container .appointment .row .appointment-item:first-child .goto {
   background: linear-gradient(to right, rgba(168, 240, 210, 0.42), #a8f0d2);
+}
+.container .recommend-doctor .header p {
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.09em;
 }
 .copyright {
   text-align: center;

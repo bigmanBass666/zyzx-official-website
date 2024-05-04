@@ -168,32 +168,33 @@ html {
 
   width: 6rem;
 
-  .tools {
-    .header {
-      display: flex;
-      justify-content: end;
-      margin-bottom: 0.03rem;
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.03rem;
 
-      font-size: 1.1em;
+    font-size: 1.1em;
 
-      a {
-        transition: all var(--transition-duration);
+    a {
+      margin-left: auto;
+      transition: all var(--transition-duration);
 
-        &:hover {
-          color: var(--main-color);
-          transform: translateX(0.03rem);
-        }
+      &:hover {
+        color: var(--main-color);
+        transform: translateX(0.03rem);
+      }
 
-        &:active {
-          transform: translateX(0.05rem);
-        }
+      &:active {
+        transform: translateX(0.05rem);
+      }
 
-        i {
-          font-size: inherit;
-        }
+      i {
+        font-size: inherit;
       }
     }
+  }
 
+  .tools {
     .row {
       display: flex;
       justify-content: space-between;
@@ -253,8 +254,9 @@ html {
           }
 
           .title {
-            top: .1rem;
+            top: .09rem;
             font-size: 1.8em;
+            letter-spacing: .1em;
           }
 
           .description {
@@ -333,6 +335,16 @@ html {
             background: linear-gradient(to right, rgba(168, 240, 210, .42), rgb(168, 240, 210, .42));
           }
         }
+      }
+    }
+  }
+
+  .recommend-doctor {
+    .header {
+      p {
+        font-size: 1.2em;
+        font-weight: 300;
+        letter-spacing: .09em;
       }
     }
   }
