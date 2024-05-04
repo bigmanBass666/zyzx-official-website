@@ -174,8 +174,8 @@ html body .iconfont:hover {
     width: 100%;
   }
   to {
-    width: 70%;
-    border-radius: 0.5rem;
+    width: 65%;
+    border-radius: 0.3rem;
   }
 }
 .banner .imgBox img {
