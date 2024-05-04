@@ -341,10 +341,72 @@ html {
 
   .recommend-doctor {
     .header {
+      margin-bottom: .07rem;
+
       p {
         font-size: 1.2em;
         font-weight: 300;
         letter-spacing: .09em;
+
+        i {
+          font-size: .95em;
+          margin-left: 0.028rem;
+        }
+      }
+    }
+
+    .body {
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: .2rem .35rem;
+
+        li {
+          .card {
+            background-color: pink;
+            border-radius: 0.037rem;
+
+            overflow: hidden;
+            cursor: pointer;
+
+            transition: all var(--transition-duration);
+
+            .imgBox {
+              img {
+                height: .8rem;
+                width: 100%;
+
+                object-fit: cover;
+              }
+            }
+
+            .card-body {
+              padding: 0.1rem;
+
+              .card-title,
+              .secondary-title {
+                display: flex;
+                justify-content: space-between;
+              }
+
+              .speciality {
+                &::before {
+                  content: '擅长:';
+                }
+              }
+            }
+
+            &:hover {
+              transform: translateY(-0.02rem);
+              box-shadow: var(--bs-shadow);
+            }
+
+            &:active {
+              transform: translateY(-0.005rem);
+              box-shadow: var(--bs-shadow-active);
+            }
+          }
+        }
       }
     }
   }

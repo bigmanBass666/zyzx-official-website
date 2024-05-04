@@ -234,10 +234,53 @@ html body .iconfont:hover {
 .container .appointment .row .appointment-item:first-child .goto {
   background: linear-gradient(to right, rgba(168, 240, 210, 0.42), #a8f0d2);
 }
+.container .recommend-doctor .header {
+  margin-bottom: 0.07rem;
+}
 .container .recommend-doctor .header p {
   font-size: 1.2em;
   font-weight: 300;
   letter-spacing: 0.09em;
+}
+.container .recommend-doctor .header p i {
+  font-size: 0.95em;
+  margin-left: 0.028rem;
+}
+.container .recommend-doctor .body ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0.2rem 0.35rem;
+}
+.container .recommend-doctor .body ul li .card {
+  background-color: pink;
+  border-radius: 0.037rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-duration);
+}
+.container .recommend-doctor .body ul li .card .imgBox img {
+  height: 0.8rem;
+  width: 100%;
+  object-fit: cover;
+}
+.container .recommend-doctor .body ul li .card .card-body {
+  padding: 0.1rem;
+}
+.container .recommend-doctor .body ul li .card .card-body .card-title,
+.container .recommend-doctor .body ul li .card .card-body .secondary-title {
+  display: flex;
+  justify-content: space-between;
+}
+.container .recommend-doctor .body ul li .card .card-body .speciality::before {
+  content: '擅长:';
+}
+.container .recommend-doctor .body ul li .card:hover {
+  transform: translateY(-0.02rem);
+  box-shadow: var(--bs-shadow);
+}
+.container .recommend-doctor .body ul li .card:active {
+  transform: translateY(-0.005rem);
+  box-shadow: var(--bs-shadow-active);
 }
 .copyright {
   text-align: center;
