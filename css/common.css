@@ -4,6 +4,8 @@ html {
   --body-color: var(--bs-body-color);
   --bs-shadow: 0 0.0417rem 0.0833rem rgba(var(--bs-body-color-rgb), 0.15);
   --bs-shadow-active: 0 0.0208rem 0.0417rem rgba(var(--bs-body-color-rgb), 0.15);
+  --xiaomi-shadow: 0 0.0781rem 0.1563rem rgba(0, 0, 0, 0.1);
+  --xiaomi-shadow-active: 0 0.0391rem 0.0781rem rgba(0, 0, 0, 0.1);
   --transition-duration: 0.2s;
   --bs-nice-shadow: 0 0 0 0.0208rem rgba(var(--main-color-rgb), 0.25);
   overflow-x: hidden !important;
@@ -114,7 +116,7 @@ html body .iconfont:hover {
   flex-direction: column;
   gap: 0.4rem;
   margin: 0.2rem auto;
-  width: 6rem;
+  width: 6.2rem;
 }
 .container .header {
   display: flex;
@@ -141,26 +143,85 @@ html body .iconfont:hover {
   justify-content: space-between;
 }
 .container .tools .row .tool-item {
+  --hover-color: var(--main-color);
+  position: relative;
+  width: 0.62rem;
+  height: 0.7rem;
   padding: 0.05rem 0.1rem;
   border-radius: 0.03rem;
+  background-color: #fff;
   transition: all var(--transition-duration);
   cursor: pointer;
+}
+.container .tools .row .tool-item.znwz {
+  --hover-color: #2261c8;
+}
+.container .tools .row .tool-item.znwz img {
+  transform: translateY(0.03rem);
+}
+.container .tools .row .tool-item.jkzx {
+  --hover-color: #41b39d;
+}
+.container .tools .row .tool-item.jkzx img {
+  transform: translateY(0.04rem);
+}
+.container .tools .row .tool-item.znpf {
+  --hover-color: #ffb900;
+}
+.container .tools .row .tool-item.znpf img {
+  transform: translateY(0.003rem);
+}
+.container .tools .row .tool-item.znsb {
+  --hover-color: #ff4242;
+}
+.container .tools .row .tool-item.znsb img {
+  transform: translateY(0.04rem);
+}
+.container .tools .row .tool-item.bad.yfjc {
+  padding: 0.05rem 0.145rem;
+}
+.container .tools .row .tool-item.bad.yfjc img {
+  transform: translateY(0.05rem);
+}
+.container .tools .row .tool-item.bad.jkzc {
+  padding: 0.05rem 0.177rem;
+}
+.container .tools .row .tool-item.bad.jkzc img {
+  transform: translateY(0.01rem);
+}
+.container .tools .row .tool-item.bad.smzs {
+  padding: 0.05rem 0.12rem;
+}
+.container .tools .row .tool-item.bad.smzs img {
+  transform: translateY(0.035rem);
+}
+.container .tools .row .tool-item.bad.jbdt {
+  padding: 0.05rem 0.16rem;
+}
+.container .tools .row .tool-item.bad.jbdt img {
+  transform: translateY(0.02rem);
 }
 .container .tools .row .tool-item:hover {
   transform: translateY(-0.02rem);
   box-shadow: var(--bs-shadow);
-  color: var(--main-color);
+}
+.container .tools .row .tool-item:hover p {
+  color: var(--hover-color);
 }
 .container .tools .row .tool-item:active {
   transform: translateY(-0.005rem);
   box-shadow: var(--bs-shadow-active);
 }
 .container .tools .row .tool-item .tool-link img {
-  width: 0.42rem;
+  width: 100%;
 }
 .container .tools .row .tool-item .tool-link p {
-  margin-top: 0.06rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.07rem;
   text-align: center;
+  text-wrap: nowrap;
 }
 .container .appointment .row {
   display: flex;
@@ -252,11 +313,12 @@ html body .iconfont:hover {
   grid-gap: 0.2rem 0.35rem;
 }
 .container .recommend-doctor .body ul li .card {
-  background-color: pink;
+  background-color: #fff;
   border-radius: 0.037rem;
   overflow: hidden;
   cursor: pointer;
   transition: all var(--transition-duration);
+  box-shadow: var(--bs-shadow-active);
 }
 .container .recommend-doctor .body ul li .card .imgBox img {
   height: 0.8rem;
@@ -270,9 +332,31 @@ html body .iconfont:hover {
 .container .recommend-doctor .body ul li .card .card-body .secondary-title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.container .recommend-doctor .body ul li .card .card-body .card-title .name {
+  font-size: 0.1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+.container .recommend-doctor .body ul li .card .card-body .secondary-title {
+  margin: 0.05rem 0;
+}
+.container .recommend-doctor .body ul li .card .card-body .secondary-title .score {
+  width: 0.4rem;
+}
+.container .recommend-doctor .body ul li .card .card-body .secondary-title .visit-time span {
+  margin-right: 0.015rem;
+  color: #007AFF;
+}
+.container .recommend-doctor .body ul li .card .card-body .speciality {
+  color: gray;
 }
 .container .recommend-doctor .body ul li .card .card-body .speciality::before {
+  margin-right: 0.05rem;
   content: '擅长:';
+  font-size: 1.05em;
+  color: #000;
 }
 .container .recommend-doctor .body ul li .card:hover {
   transform: translateY(-0.02rem);
