@@ -17,10 +17,7 @@ function redirectToMobileOrDesktop() {
 }
 
 // 在页面加载完成后调用函数
-window.onload = redirectToMobileOrDesktop
-
-
-
+// window.onload = redirectToMobileOrDesktop
 
 
 
