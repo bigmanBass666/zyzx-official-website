@@ -23,16 +23,6 @@ html body .iconfont:hover {
   background-color: var(--main-color);
   color: #fff;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0.5;
-    transform: translateY(0.1rem) scale(0.85);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
 .navbar {
   position: fixed;
   top: 0;
