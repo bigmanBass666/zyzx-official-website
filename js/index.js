@@ -22,7 +22,7 @@ setInterval(() => {
 // 监听滚动事件
 const navbar = document.querySelector('.navbar') // 获取导航栏元素
 
-window.addEventListener('scroll', function (e) {
+window.addEventListener('scroll', function () {
 	// 获取当前页面已经滚动的垂直距离
 	var scrollDistance = window.scrollY
 	console.log(scrollDistance)

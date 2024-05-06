@@ -409,7 +409,7 @@ html body .iconfont:hover {
   box-shadow: var(--bs-shadow-active);
 }
 .container .recommend-doctor .body ul li .card .imgBox img {
-  height: 0.8rem;
+  height: 1rem;
   width: 100%;
   object-fit: cover;
 }
