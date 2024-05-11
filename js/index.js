@@ -1,9 +1,3 @@
-
-
-
-
-
-
 let img = document.querySelector('.banner img') // 获取图片元素
 let imageIndex = 1 // 图片索引，从第二张开始
 
@@ -22,7 +16,7 @@ setInterval(() => {
 	img.src = imagePaths[imageIndex] // 更换图片的 src 属性
 
 	document.querySelectorAll('.banner .indicator>div')[imageIndex].classList.add("active") // 更新指示器样式
-}, 6000)
+}, 8000)
 
 
 // 监听滚动事件
