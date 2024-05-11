@@ -360,8 +360,10 @@
   <script src="/js/flexible.js"></script>
   <script src="/js/index.js"></script>
   <script src="/js/magic_mouse.js"></script>
+  <script src="/js/lenis/lenis.min.js"></script>
 
   <script>
+    // magic_mouse init
     document.querySelectorAll('a, button, label, .recommend-doctor .card, .icon')
       .forEach(el => {
         el.classList.add('magic-hover')
@@ -375,6 +377,17 @@
       "outerHeight": 30
     }
     magicMouse(options)
+
+
+    // lenis init
+    const lenis = new Lenis()
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
   </script>
 </body>
 
