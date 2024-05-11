@@ -16,8 +16,7 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/common.css">
 
-  <link rel="shortcut icon" href="/favicon.ico"
-    type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 
   <script>
@@ -35,13 +34,19 @@
       }
     }
 
-    redirectToMobileOrDesktop()
+    // redirectToMobileOrDesktop()
 
     // 在DOM加载完成后调用函数
     // document.addEventListener('DOMContentLoaded', function () {
     //   redirectToMobileOrDesktop()
     // });
   </script>
+
+  <style>
+    * {
+      cursor: none !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -354,6 +359,23 @@
 
   <script src="/js/flexible.js"></script>
   <script src="/js/index.js"></script>
+  <script src="/js/magic_mouse.js"></script>
+
+  <script>
+    document.querySelectorAll('a, button, label, .recommend-doctor .card, .icon')
+      .forEach(el => {
+        el.classList.add('magic-hover')
+      })
+    const options = {
+      "outerStyle": "disable",
+      "hoverEffect": "pointer-overlay",
+      "hoverItemMove": false,
+      "defaultCursor": false,
+      "outerWidth": 30,
+      "outerHeight": 30
+    }
+    magicMouse(options)
+  </script>
 </body>
 
 </html>

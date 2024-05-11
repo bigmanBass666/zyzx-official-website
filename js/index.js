@@ -1,3 +1,9 @@
+
+
+
+
+
+
 let img = document.querySelector('.banner img') // 获取图片元素
 let imageIndex = 1 // 图片索引，从第二张开始
 

@@ -13,6 +13,17 @@ html {
 html body {
   font-size: 0.085rem;
 }
+html body #magicPointer {
+  height: 0.125rem;
+  width: 0.125rem;
+  mix-blend-mode: difference;
+  box-shadow: 0px 0px 15px -5px #fff;
+  z-index: 9999;
+}
+html body #magicPointer.pointer-overlay {
+  height: 0.2604rem;
+  width: 0.2604rem;
+}
 html body .iconfont:hover {
   color: var(--main-color);
 }
@@ -27,7 +38,7 @@ html body .iconfont:hover {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 999;
   display: flex;
   align-items: center;
   padding: 0.06rem 0.15rem;

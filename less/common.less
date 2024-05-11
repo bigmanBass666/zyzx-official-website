@@ -20,6 +20,20 @@ html {
     // background-color: #f5f5f5;
     font-size: .085rem;
 
+    // 光标
+    #magicPointer {
+      height: .125rem;
+      width: .125rem;
+      mix-blend-mode: difference;
+      box-shadow: 0px 0px 15px -5px #fff;
+      z-index: 9999;
+
+      &.pointer-overlay {
+        height: .2604rem;
+        width: .2604rem;
+      }
+    }
+
     .iconfont {
       // font-size: .15rem;
       // font-weight: bold;
@@ -38,6 +52,8 @@ html {
   }
 
   caret-color: var(--main-color) !important;
+
+  // cursor: none !important;
 
   // border-color: var(--bs-border-color);
 }
@@ -58,7 +74,7 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 999;
 
   display: flex;
   align-items: center;
