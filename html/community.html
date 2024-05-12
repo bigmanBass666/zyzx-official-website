@@ -178,7 +178,7 @@
         <ul>
           <li>
             <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
+              <div class="imgBox"><img src="/img/recommend-doctor/jyy.png" alt=""></div>
               <div class="card-body">
                 <h5 class="card-title">
                   <div class="name">江园园</div>
@@ -195,7 +195,7 @@
           </li>
           <li>
             <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
+              <div class="imgBox"><img src="/img/recommend-doctor/lqh.png" alt=""></div>
               <div class="card-body">
                 <h5 class="card-title">
                   <div class="name">林青鸿</div>
@@ -212,7 +212,7 @@
           </li>
           <li>
             <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
+              <div class="imgBox"><img src="/img/recommend-doctor/jyy.png" alt=""></div>
               <div class="card-body">
                 <h5 class="card-title">
                   <div class="name">江园园</div>
@@ -229,7 +229,7 @@
           </li>
           <li>
             <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
+              <div class="imgBox"><img src="/img/recommend-doctor/lqh.png" alt=""></div>
               <div class="card-body">
                 <h5 class="card-title">
                   <div class="name">林青鸿</div>
@@ -246,7 +246,7 @@
           </li>
           <li>
             <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
+              <div class="imgBox"><img src="/img/recommend-doctor/jyy.png" alt=""></div>
               <div class="card-body">
                 <h5 class="card-title">
                   <div class="name">江园园</div>
@@ -263,7 +263,7 @@
           </li>
           <li>
             <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
+              <div class="imgBox"><img src="/img/recommend-doctor/lqh.png" alt=""></div>
               <div class="card-body">
                 <h5 class="card-title">
                   <div class="name">林青鸿</div>
@@ -280,7 +280,7 @@
           </li>
           <li>
             <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
+              <div class="imgBox"><img src="/img/recommend-doctor/jyy.png" alt=""></div>
               <div class="card-body">
                 <h5 class="card-title">
                   <div class="name">江园园</div>
@@ -297,7 +297,7 @@
           </li>
           <li>
             <div class="card">
-              <div class="imgBox"><img src="/img/lilac.jpg" alt=""></div>
+              <div class="imgBox"><img src="/img/recommend-doctor/lqh.png" alt=""></div>
               <div class="card-body">
                 <h5 class="card-title">
                   <div class="name">林青鸿</div>
@@ -330,6 +330,36 @@
 
   <script src="/js/flexible.js"></script>
   <script src="/js/index.js"></script>
+  <script src="/js/magic_mouse.js"></script>
+  <script src="/js/lenis/lenis.min.js"></script>
+
+  <script>
+    // magic_mouse init
+    document.querySelectorAll('a, button, label, .recommend-doctor .card, .icon')
+      .forEach(el => {
+        el.classList.add('magic-hover')
+      })
+    const options = {
+      "outerStyle": "disable",
+      "hoverEffect": "pointer-overlay",
+      "hoverItemMove": false,
+      "defaultCursor": false,
+      "outerWidth": 30,
+      "outerHeight": 30
+    }
+    magicMouse(options)
+
+
+    // lenis init
+    const lenis = new Lenis()
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  </script>
 </body>
 
 </html>

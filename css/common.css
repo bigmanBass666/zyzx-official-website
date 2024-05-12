@@ -458,7 +458,7 @@ html body .iconfont:hover {
 .copyright {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 0.1rem;
+  font-size: 0.11rem;
 }
 .copyright a {
   color: inherit;
@@ -492,4 +492,7 @@ html.lenis body {
 }
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+* {
+  cursor: none !important;
 }

@@ -16,7 +16,7 @@ setInterval(() => {
 	img.src = imagePaths[imageIndex] // 更换图片的 src 属性
 
 	document.querySelectorAll('.banner .indicator>div')[imageIndex].classList.add("active") // 更新指示器样式
-}, 8000)
+}, 10000)
 
 
 // 监听滚动事件
