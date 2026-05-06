@@ -6,7 +6,7 @@
 
 中医智行 PC 端官网是一个展示型网站，为用户提供中医健康咨询、预约挂号、医生推荐等服务。网站采用响应式设计，在 PC 端展示完整功能，同时会自动检测移动设备并跳转到移动端版本。
 
-**在线访问**: [zyzx.pro](https://zyzx.pro/)
+**在线访问**: [zyzx.netlify.app/](https://zyzx.netlify.app/)
 
 **移动端**: [m-zyzx.netlify.app](https://m-zyzx.netlify.app/)
 
